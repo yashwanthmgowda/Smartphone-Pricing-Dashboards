@@ -1,0 +1,13 @@
+[
+{"brand": "Xiaomi", "note": "SRP is treated as MOP (as you confirmed). The Ready Reckoner has no DP or RP column, so DP/RP is blank. Bank offers and NEP are kept as reference."},
+{"brand": "Motorola", "note": "RRP is treated as MOP (as you confirmed). The sheet has no DP or RP column, so DP/RP is blank; promo, bank offer and ASP prices are kept as reference. The sheet is filtered, so only the visible rows are captured, and the 'ASP R' and 'ASP N' headers are cut off in the image."},
+{"brand": "Infinix", "note": "Brand name is not printed in the first list (confirmed as Infinix by you). Prices were refreshed from an updated Infinix list on 14-Oct-2026 and replace the earlier ones. TVs, tablets (X PAD) and accessories in the lists are left out."},
+{"brand": "Tecno", "note": "RP is the 'RTLR Price' from the DNS Electronics list. The 'DBR price' is kept as reference."},
+{"brand": "itel", "note": "Both MOP and DP come from the itel posters (DP treated as RP). Zeno X50 5G and Zeno F30 5G, itel's Zeno range, are listed under itel."},
+{"brand": "POCO", "note": "Most rows use the MOP/DP list. C85 5G 8+128 and M8x 5G 6+128 appear only in the TPD/Activation scheme sheet, so they carry that sheet's DP and no MOP. Where both lists cover a variant, their DPs differ and the MOP/DP list is shown."},
+{"brand": "vivo", "note": "MSP in the vivo lists is treated as MOP. The Rela list (w.e.f. 25-09-2026) is primary; the second list fills gaps."},
+{"brand": "iQOO", "note": "iQOO models appear inside the vivo / Rela price list and are shown as their own brand. MSP treated as MOP."},
+{"brand": "Lava", "note": "RP and MOP are as listed. The list has no variant column, so the variant is whatever the model name shows (for example 128GB) and is blank when the name shows none."},
+{"brand": "Mivi", "note": "The list's 'Billing Price' is treated as DP/RP (as you confirmed). The model is shown as 'One 5G' (listed as MIVI ONE 5G)."},
+{"brand": "AI+", "note": "'Retailer DP' is treated as DP/RP. Nova Ultra Flip shows no memory variant in the list, so its variant is blank. Further columns on the right of the list were cut off in the image."}
+]

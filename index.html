@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smartphone Price Tracker</title>
+  <meta name="description" content="Brand-wise and price-segment-wise smartphone MOP and DP/RP, tracked month by month.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='3' width='14' height='26' rx='3' fill='none' stroke='%23888' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='25' r='1.5' fill='%23888'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="pt" id="price-tracker">
+    <header>
+      <h1 class="pt-title">Smartphone price tracker</h1>
+      <p class="pt-sub" id="summary-line">Loading prices…</p>
+    </header>
+
+    <div class="pt-load-error" id="load-error" role="alert" hidden></div>
+
+    <section class="pt-tiles" aria-label="Summary">
+      <div class="pt-tile"><span class="pt-tile-n" id="tile-variants">—</span><span class="pt-tile-l">Variants in latest month</span></div>
+      <div class="pt-tile"><span class="pt-tile-n" id="tile-brands">—</span><span class="pt-tile-l">Brands</span></div>
+      <div class="pt-tile"><span class="pt-tile-n" id="tile-months">—</span><span class="pt-tile-l">Months recorded</span></div>
+    </section>
+
+    <section class="pt-card" id="prices-table">
+      <h2 class="pt-card-h">Prices by brand, model and variant</h2>
+      <p class="pt-card-n">Amounts in ₹. DP/RP is the retailer price; MOP is the minimum operating price. A blank cell means that price was not in the list. An amber edge on a row means it carries a note; hover over the row to read it. Price segments use each variant's latest MOP; a range includes its lower value and stops just below its upper value (15k-20k is ₹15,000 to ₹19,999). Variants with no MOP sit under No MOP. Click a column heading to sort.</p>
+      <div class="pt-tools">
+        <div class="pt-toggle" role="group" aria-label="Group the table by">
+          <button type="button" class="pt-view" data-view="brand" aria-pressed="true">By brand</button>
+          <button type="button" class="pt-view" data-view="segment" aria-pressed="false">By price segment</button>
+        </div>
+        <select class="pt-brand" aria-label="Brand"></select>
+        <select class="pt-seg" aria-label="Price segment"></select>
+        <input class="pt-search" type="search" placeholder="Search model or variant" aria-label="Search model or variant">
+        <label class="pt-check"><input class="pt-hide" type="checkbox"> Hide rows with no MOP or DP/RP</label>
+      </div>
+      <div class="pt-scroll">
+        <table class="pt-table pt-main">
+          <thead><tr class="pt-hr"></tr></thead>
+          <tbody class="pt-body"></tbody>
+        </table>
+        <div class="pt-msg" hidden></div>
+      </div>
+    </section>
+
+    <section class="pt-card" id="segments" hidden>
+      <h2 class="pt-card-h">Price segments</h2>
+      <p class="pt-card-n">Based on each variant's latest MOP. Click a segment to filter the table above.</p>
+      <div class="pt-scroll pt-scroll-short">
+        <table class="pt-table pt-segs">
+          <thead><tr>
+            <th>Segment</th>
+            <th class="num">Variants</th>
+            <th class="num">Brands</th>
+            <th>Brands in segment</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
